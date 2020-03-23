@@ -11,20 +11,53 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand d-flex align-items-center"><img src="./img/smarthome.png" class="mr-3" alt="logo smarthouse" width="30px" height="30px">SmartHouse|<small>Inc</small></a>
-        <div class="dropdown col-md-2">
-            <a class="btn btn-block btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Carrito 
-            </a>
-            <div class="dropdown-menu mt-3 ml-3" aria-labelledby="dropdownMenuLink">
-                <div class="dropdown-item">
-                    <h6>Mi carrito de compras: </h6>
-                </div>
-                <div class="dropdown-divider"></div>
-            </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed fixed-top">
+        <a class="navbar-brand" href="#"> <img src="./img/smarthome.png" class="mr-3" alt=""> SmartHouse|<span class="text-muted">Inc</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a class="btn btn-block btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Carrito: <span id="numeroProductos">0</span>
+                        </a>
+                        <div id="container-product" class="dropdown-menu mt-2" aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-item" style="width: 400px">
+                                <h6>Mi carrito de compras: </h6>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-item w-100 d-flex justify-content-between align-items-center">
+                                <div class="col-md-4">
+                                    <img src="./img/p1.png" alt="producto 1" width="100%">
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="text-muted text-center">Alexa Echo 3</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <p class="text-success text-center">$120</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
     </nav>
+
+
+
     <div class="col-md-10 mx-auto my-2">
         <div class="row w-100 bg-main d-flex align-items-center">
             <div class="col-md-3 ml-5 p-5 rounded" style="background: rgba(0, 0, 0, 0.3);">
@@ -58,140 +91,81 @@
             </a>
         </nav>
 
-        <div class="container w-100 my-2">
-            <div class="w-100 row">
-                <div class="card mr-2 mb-2" style="width: 20rem;">
-                    <img class="card-img" src="./img/p1.png" width="400px" heightwidth="400px" height="400px" alt="Vans">
-                    <div class="card-img-overlay d-flex justify-content-end">
-                        <a href="#" class="card-link text-danger like">
-                            <img src="./img/heart.png" width="20px" height="20px" alt="lista de deseos">
-                        </a>
-                    </div>
+        <div id="contCards" class="container w-100 my-2">
+            <div class="w-100 row d-flex justify-content-center">
+                <div class="card mb-2 mr-2" style="width: 18rem;">
+                    <img src="./img/p1.png" class="card-img-top" width="100%" height="400px">
                     <div class="card-body">
-                        <h4 class="card-title">Alexa EchoDot 3Gen</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Style: VA33TXRJ5</h6>
-                        <p class="card-text">
-                            The Vans All-Weather MTE Collection features footwear and apparel designed to withstand the elements whilst still looking cool.
-                        </p>
-                        <div class="buy d-flex justify-content-between align-items-center">
-                            <div class="price text-success">
-                                <h5 class="mt-4">$180</h5>
-                            </div>
-                            <button class="btn btn-danger btn-lg" style="cursor: pointer !important;">Add to cart</button>
+                        <h5 class="card-title">Alexa Echo 3 </h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <p class="text-success">$120</p>
+                            <button class="btn-add-cart btn btn-danger">Add To Cart</button>
                         </div>
                     </div>
                 </div>
-                <div class="card mr-2 mb-2" style="width: 20rem;">
-                    <img class="card-img" src="./img/p2.png" width="400px" height="400px" alt="Vans">
-                    <div class="card-img-overlay d-flex justify-content-end">
-                        <a href="#" class="card-link text-danger like">
-                            <img src="./img/heart.png" width="20px" height="20px" alt="lista de deseos">
-                        </a>
-                    </div>
+                <div class="card mb-2 mr-2" style="width: 18rem;">
+                    <img src="./img/p2.png" class="card-img-top" width="100%" height="400px">
                     <div class="card-body">
-                        <h4 class="card-title">Google Home Assistant</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Style: VA33TXRJ5</h6>
-                        <p class="card-text">
-                            The Vans All-Weather MTE Collection features footwear and apparel designed to withstand the elements whilst still looking cool.
-                        </p>
-                        <div class="buy d-flex justify-content-between align-items-center">
-                            <div class="price text-success">
-                                <h5 class="mt-4">$30</h5>
-                            </div>
-                            <button class="btn btn-danger btn-lg" style="cursor: pointer !important;">Add to cart</button>
+                        <h5 class="card-title">Google Home 3Gen</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <p class="text-success">$40</p>
+                            <button class="btn-add-cart btn btn-danger">Add To Cart</button>
                         </div>
                     </div>
                 </div>
-                <div class="card mr-2 mb-2" style="width: 20rem;">
-                    <img class="card-img" src="./img/p3.png" width="400px" height="400px" alt="Vans">
-                    <div class="card-img-overlay d-flex justify-content-end">
-                        <a href="#" class="card-link text-danger like">
-                            <img src="./img/heart.png" width="20px" height="20px" alt="lista de deseos">
-                        </a>
-                    </div>
+                <div class="card mb-2 mr-2" style="width: 18rem;">
+                    <img src="./img/p3.png" class="card-img-top" width="100%" height="400px">
                     <div class="card-body">
-                        <h4 class="card-title">EchoDot 2Gen Alexa</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Style: VA33TXRJ5</h6>
-                        <p class="card-text">
-                            The Vans All-Weather MTE Collection features footwear and apparel designed to withstand the elements whilst still looking cool.
-                        </p>
-                        <div class="buy d-flex justify-content-between align-items-center">
-                            <div class="price text-success">
-                                <h5 class="mt-4">$40</h5>
-                            </div>
-                            <button class="btn btn-danger btn-lg" style="cursor: pointer !important;">Add to cart</button>
+                        <h5 class="card-title">Alexa Echo 2Gen Speaker</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <p class="text-success">$55</p>
+                            <button class="btn-add-cart btn btn-danger">Add To Cart</button>
                         </div>
                     </div>
                 </div>
-                <div class="card mr-2 mb-2" style="width: 20rem;">
-                    <img class="card-img" src="./img/p4.png" width="400px" height="400px" alt="Vans">
-                    <div class="card-img-overlay d-flex justify-content-end">
-                        <a href="#" class="card-link text-danger like">
-                            <img src="./img/heart.png" width="20px" height="20px" alt="lista de deseos">
-                        </a>
-                    </div>
+                <div class="card mb-2 mr-2" style="width: 18rem;">
+                    <img src="./img/p4.png" class="card-img-top" width="100%" height="400px">
                     <div class="card-body">
-                        <h4 class="card-title">Plug Us Smart</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Style: VA33TXRJ5</h6>
-                        <p class="card-text">
-                            The Vans All-Weather MTE Collection features footwear and apparel designed to withstand the elements whilst still looking cool.
-                        </p>
-                        <div class="buy d-flex justify-content-between align-items-center">
-                            <div class="price text-success">
-                                <h5 class="mt-4">$20</h5>
-                            </div>
-                            <button class="btn btn-danger btn-lg" style="cursor: pointer !important;">Add to cart</button>
+                        <h5 class="card-title">Plug us Smart House</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <p class="text-success">$20</p>
+                            <button class="btn-add-cart btn btn-danger">Add To Cart</button>
                         </div>
                     </div>
                 </div>
-                <div class="card mr-2 mb-2" style="width: 20rem;">
-                    <img class="card-img" src="./img/p5.jpg" width="400px" height="400px" alt="Vans">
-                    <div class="card-img-overlay d-flex justify-content-end">
-                        <a href="#" class="card-link text-danger like">
-                            <img src="./img/heart.png" width="20px" height="20px" alt="lista de deseos">
-                        </a>
-                    </div>
+                <div class="card mb-2 mr-2" style="width: 18rem;">
+                    <img src="./img/p5.jpg" class="card-img-top" width="100%" height="400px">
                     <div class="card-body">
-                        <h4 class="card-title">Lightin Smart</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Style: VA33TXRJ5</h6>
-                        <p class="card-text">
-                            The Vans All-Weather MTE Collection features footwear and apparel designed to withstand the elements whilst still looking cool.
-                        </p>
-                        <div class="buy d-flex justify-content-between align-items-center">
-                            <div class="price text-success">
-                                <h5 class="mt-4">$18</h5>
-                            </div>
-                            <button class="btn btn-danger btn-lg" style="cursor: pointer !important;">Add to cart</button>
+                        <h5 class="card-title">Lightin 5w Smart</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <p class="text-success">$15</p>
+                            <button class="btn-add-cart btn btn-danger">Add To Cart</button>
                         </div>
                     </div>
                 </div>
-                <div class="card mr-2 mb-2" style="width: 20rem;">
-                    <img class="card-img" src="./img/p6.jpg" width="400px" height="400px" alt="Vans">
-                    <div class="card-img-overlay d-flex justify-content-end">
-                        <a href="#" class="card-link text-danger like">
-                            <img src="./img/heart.png" width="20px" height="20px" alt="lista de deseos">
-                        </a>
-                    </div>
+                <div class="card mb-2 mr-2" style="width: 18rem;">
+                    <img src="./img/p6.jpg" class="card-img-top" width="100%" height="400px">
                     <div class="card-body">
-                        <h4 class="card-title">Key Smart</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Style: VA33TXRJ5</h6>
-                        <p class="card-text">
-                            The Vans All-Weather MTE Collection features footwear and apparel designed to withstand the elements whilst still looking cool.
-                        </p>
-                        <div class="buy d-flex justify-content-between align-items-center">
-                            <div class="price text-success">
-                                <h5 class="mt-4">$310</h5>
-                            </div>
-                            <button class="btn btn-danger btn-lg" style="cursor: pointer !important;">Add to cart</button>
+                        <h5 class="card-title">Key SmartHouse</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <p class="text-success">$220</p>
+                            <button class="btn-add-cart btn btn-danger">Add To Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="./js/app.js"></script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
